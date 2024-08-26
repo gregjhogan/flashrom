@@ -428,6 +428,9 @@
 #define IMT_IM29F004B		0xAE
 #define IMT_IM29F004T		0xAF
 
+#define INFINEON_ID   0x34
+#define INFINEON_S25HS01GT 0x2B1B
+
 #define INTEL_ID		0x89	/* Intel */
 #define INTEL_28F320J5		0x14
 #define INTEL_28F640J5		0x15

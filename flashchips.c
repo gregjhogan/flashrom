@@ -8567,6 +8567,24 @@ const struct flashchip flashchips[] = {
 	},
 
 	{
+		.vendor		= "Infineon",
+		.name		= "S25HS01GT",
+		.bustype	= BUS_SPI,
+		.manufacture_id	= INFINEON_ID,
+		.model_id	= INFINEON_S25HS01GT,
+		.total_size	= 131072, /* 1M-bit */
+		.page_size	= 256,
+		/* OTP: 1024B total (32 x 32B); enter 0x06, exit 0x04 */
+		.feature_bits	= FEATURE_WRSR_WREN | FEATURE_OTP | FEATURE_4BA,
+		.tested		= TEST_OK_PR,
+		.probe		= PROBE_SPI_RDID,
+		.probe_timing	= TIMING_ZERO,
+		.write		= 0,
+		.read		= SPI_CHIP_READ, /* Fast read (0x0B) and multi I/O supported */
+		.voltage	= {1700, 2000},
+	},
+
+	{
 		.vendor		= "Intel",
 		.name		= "25F160S33B8",
 		.bustype	= BUS_SPI,
